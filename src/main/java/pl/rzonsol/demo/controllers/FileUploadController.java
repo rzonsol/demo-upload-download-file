@@ -1,4 +1,4 @@
-package pl.rzonsol.demo.upload;
+package pl.rzonsol.demo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -71,7 +71,7 @@ public class FileUploadController {
                                    RedirectAttributes redirectAttributes) {
 
         storageService.store(file);
-        redirectAttributes.addFlashAttribute("message", "You Succesfull upload " + file.getOriginalFilename() + " !");
+        redirectAttributes.addFlashAttribute("message", "You Succesfull controllers " + file.getOriginalFilename() + " !");
         return "redirect:/";
     }
 
