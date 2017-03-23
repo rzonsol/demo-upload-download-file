@@ -1,0 +1,10 @@
+<h1>
+  List of Files
+</h1>
+<ul class="list-group">
+  <li *ngFor="let link of allFiles" class="list-group-item"><a href="{{link}}">{{link}}</a></li>
+</ul>
+
+<input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf,.doc,.docx">
+
+<button class="btn btn-primary" (click)="onSubmit()">Send</button>

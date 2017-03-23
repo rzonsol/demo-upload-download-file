@@ -33,6 +33,7 @@ public class FileUploadController {
     }
 
     @GetMapping("/files")
+    @CrossOrigin(origins = "http://localhost:4200")
     @ResponseBody
     public List<String> listUploadFilesJson() {
         List<String> files = storageService.loadAll().map(path ->
@@ -67,6 +68,7 @@ public class FileUploadController {
     }
 
     @PostMapping("/")
+    @CrossOrigin(origins = "http://localhost:4200")
     public String handelFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) {
 
